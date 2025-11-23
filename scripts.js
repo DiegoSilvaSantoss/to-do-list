@@ -143,7 +143,7 @@ window.addEventListener('load', function() {
     confirmButtonText: 'Ok',
     background: '#1a1a1aff',
     color: '#fff',
-    confirmButtonColor: '#1fba00ff'
+    confirmButtonColor: '#1cab00ff'
   });
 });
 
