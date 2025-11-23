@@ -141,9 +141,9 @@ window.addEventListener('load', function() {
     imageHeight: 250,
     imageAlt: 'Imagem do Portfolio',*/
     confirmButtonText: 'Ok',
-    background: '#1e1e2f',
+    background: '#1a1a1aff',
     color: '#fff',
-    confirmButtonColor: '#9400D3'
+    confirmButtonColor: '#1fba00ff'
   });
 });
 
