@@ -23,6 +23,7 @@
   --backgIcon1Hover: green;
   --backgIcon2Hover: rgb(209, 0, 0);
   --colorIcon1E2Hover: #fff;
+  --backgLiAtivo: #14a800;
 }
 
 
@@ -171,6 +172,16 @@ body {
         }
         & li:hover {
           transform: translateY(-5px) scale(1.01);
+        }
+        & li.feito {
+          text-decoration: line-through;
+          background-color: var(--backgLiAtivo);
+          transition: 0.6s ease;
+          opacity: 0.8;
+
+          & i:nth-child(1):hover {
+            animation: none;
+          }
         }
       }
     }
