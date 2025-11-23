@@ -7,21 +7,22 @@
 
 
 :root {
-  --backgBody: #11002a;
-  --backgForm: #10081c;
-  --colorH1: #4300a8;
-  --colorIconInput: #fff;
-  --coloIconInputAnimation: #4300a8;
-  --colorIconActive: #4300a8;
-  --backgInput: #2f2e30;
-  --colorInput: #ffffff;
+  --backgBody: #ffffff;
+  --backgForm: #ececec;
+  --colorH1: #000000;
+  --colorIconInput: #646464;
+  --coloIconInputAnimation: #000000;
+  --colorIconActive: #000000;
+  --backgInput: #ffffff;
+  --colorInput: #000000;
   --backgButton: rgb(0, 150, 0);
   --coloButton: #fff;
   --backgButtonHover: rgb(0, 171, 0);
-  --backgLi: #4300a8;
-  --coloLi: #fff;
+  --backgLi: #ffffff;
+  --coloLi: #000000;
   --backgIcon1Hover: green;
   --backgIcon2Hover: rgb(209, 0, 0);
+  --colorIcon1E2Hover: #fff;
 }
 
 
@@ -39,7 +40,7 @@ body {
     flex-direction: column;
     padding: 10px;
     gap: 30px;
-    width: 400px;
+    width: 600px;
     height: 500px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 10px;
@@ -79,8 +80,8 @@ body {
 
       & input {
         position: relative;
-        width: 65%;
-        padding: 5px 30px;
+        width: 70%;
+        padding: 8px 30px;
         border-radius: 5px;
         border: none;
         border: solid 1px #000;
@@ -104,6 +105,7 @@ body {
       background-color: var(--backgButton);
       color: var(--coloButton);
       font-weight: bold;
+      font-size: 16px;
       cursor: pointer;
       margin-left: 5px;
       transition: 1s ease;
@@ -134,6 +136,7 @@ body {
           background-color: var(--backgLi);
           border-radius: 5px;
           transition: 0.5s ease;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           animation: liMovie 0.6s alternate;
 
           & i {
@@ -153,10 +156,12 @@ body {
           }
           & i:nth-child(1):hover {
             background-color: var(--backgIcon1Hover);
+            color: var(--colorIcon1E2Hover);
             transition: 0.5s ease;
           }
           & i:nth-child(2):hover {
             background-color: var(--backgIcon2Hover);
+            color: var(--colorIcon1E2Hover);
             transition: 0.5s ease;
             transform: translateY(-5px) scale(1.1);
           }

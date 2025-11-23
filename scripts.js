@@ -33,7 +33,7 @@ document.querySelector('form').addEventListener('submit', e=> {
   <i class="bi bi-trash"></i>`
 
   ul.appendChild(li)
-  input.value = " "
+  input.value = ""
   input.focus()
 })
 
@@ -43,7 +43,6 @@ document.querySelector('ul').addEventListener('click', e => {
     e.target.parentElement.remove();
   }
 });
-
 
 
 
