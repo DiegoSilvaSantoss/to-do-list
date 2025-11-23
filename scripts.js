@@ -56,7 +56,7 @@ window.addEventListener('load', function() {
       🛠️| Em fase de desenvolvimento, Estou trabalhando no resrto do projeto e nas melhorias de responsividade. Logo, logo finalizo!😉<br><br>
 
       [✔️] Estilização de interação dinâmica nos ICONS-INPUT, INPUT, BUTTON, ICONS-LI, LI.<br><br>
-      [...] Adicionar função (lista Completada) no icone CHECK, e mudar de cor o fundo da li, riscar o nome via javascript.<br><br>
+      [...] Adicionar função (lista Completada) no icone CHECK, e mudar de cor o fundo da LI, riscar o nome via javascript.<br><br>
       [✔️] Adicionar função (Apagar lista) no icone TRASH via javascript.<br><br>
       💡| MAIS IDEIAS A IMPLEMENTAR NO PROJETO!😉
       
