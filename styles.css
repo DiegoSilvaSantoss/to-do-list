@@ -24,6 +24,7 @@
   --backgIcon2Hover: rgb(209, 0, 0);
   --colorIcon1E2Hover: #fff;
   --backgLiAtivo: #14a800;
+  --colorIconFeito: #fff;
 }
 
 
@@ -182,6 +183,9 @@ body {
 
           & i:nth-child(1):hover {
             animation: none;
+          }
+          & i:nth-child(1) {
+            color: var(--colorIconFeito);
           }
         }
       }
