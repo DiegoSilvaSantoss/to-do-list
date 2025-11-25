@@ -36,21 +36,6 @@ function salvarLista() {
 }
 
 
-// Salvar no local storage
-function salvarLista() {
-  const itens = [];
-
-  document.querySelectorAll('ul li').forEach(li => {
-    itens.push({
-      texto: li.childNodes[0].textContent.trim(),
-      feito: li.classList.contains('feito')
-    });
-  });
-
-  localStorage.setItem("lista", JSON.stringify(itens));
-}
-
-
 // Carregar items salvos
 function carregarLista() {
   const dados = JSON.parse(localStorage.getItem("lista")) || [];
@@ -93,7 +78,7 @@ document.querySelector('form').addEventListener('submit', e=> {
 
   ul.appendChild(li);
 
-  salvarLista(); // <-- salva ao adicionar
+  salvarLista(); // salva ao adicionar
 
   input.value = ""
   input.focus()
