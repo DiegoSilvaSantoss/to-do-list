@@ -193,6 +193,10 @@ body {
   }
 }
 
+
+
+
+/* ANIMAÇÕES */
 @keyframes iconInputMovie {
 
   to {
@@ -226,6 +230,8 @@ body {
     transform: scale(0.1);
   }
 }
+
+
 
 /* RESPONSIVIDADE PRA CELULAR */
 @media only screen and (max-width: 648px) {
