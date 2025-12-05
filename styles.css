@@ -1,33 +1,33 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 :root {
+  /* Cores de fundos */
   --backgBody: #ffffff;
   --backgForm: #ececec;
+  --backgInput: #ffffff;
+  --backgButton: rgb(0, 150, 0);
+  --backgButtonHover: rgb(0, 171, 0);
+  --backgLi: #ffffff;
+  --backgIcon1Hover: green;
+  --backgIcon2Hover: rgb(209, 0, 0);
+  --backgLiAtivo: #14a800;
+  /* Cores de texto, icon */
   --colorH1: #000000;
   --colorIconInput: #646464;
   --coloIconInputAnimation: #000000;
   --colorIconActive: #000000;
-  --backgInput: #ffffff;
   --colorInput: #000000;
-  --backgButton: rgb(0, 150, 0);
   --coloButton: #fff;
-  --backgButtonHover: rgb(0, 171, 0);
-  --backgLi: #ffffff;
   --coloLi: #000000;
-  --backgIcon1Hover: green;
-  --backgIcon2Hover: rgb(209, 0, 0);
   --colorIcon1E2Hover: #fff;
-  --backgLiAtivo: #14a800;
   --colorIconFeito: #fff;
 }
-
-
 
 body {
   display: flex;
@@ -36,217 +36,190 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--backgBody);
-
-  & form {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 30px;
-    width: 600px;
-    height: 500px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    border-radius: 10px;
-    background-color: var(--backgForm);
-
-    & h1 {
-      text-align: center;
-      color: var(--colorH1);
-    }
-
-    & .caixa-input {
-      width: 100%;
-      height: 50px;
-      padding: 0;
-      /*border: solid 1px;*/
-
-      & i {
-        position: relative;
-        z-index: 1;
-        left: 30px;
-        font-size: 17px;
-        cursor: pointer;
-        color: var(--colorIconInput);
-        transition: 1s ease;
-      }
-      & i:hover {
-        animation: iconInputMovie 0.6s alternate infinite;
-      }
-      & i.active {
-        transform: translateY(-10px) scale(1.02);
-        color: var(--colorIconActive);
-      }
-      & i.active:hover {
-        animation: none;
-      }
-
-
-      & input {
-        position: relative;
-        width: 70%;
-        padding: 8px 30px;
-        border-radius: 5px;
-        border: none;
-        border: solid 1px #000;
-        outline: none;
-        background-color: var(--backgInput);
-        color: var(--colorInput);
-        font-weight: bold;
-        transition: 0.4s ease;
-      }
-      & input:focus {
-        transform: translateY(-10px) scale(1.02);
-        transition: 0.6s ease;
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-      }
-    }
-
-    & button {
-      padding: 5px 10px;
-      border-radius: 5px;
-      border: none;
-      background-color: var(--backgButton);
-      color: var(--coloButton);
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-      margin-left: 5px;
-      transition: 1s ease;
-    }
-    & button:hover {
-      transform: translateY(-10px) scale(1.1);
-      background-color: var(--backgButtonHover);
-       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    }
-
-    & .caixa-ul {
-      width: 100%;
-      padding: 10px;
-      overflow-y: auto;
-
-      & ul {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 0;
-        list-style-type: none;
-
-        & li {
-          position: relative;
-          display: flex;
-          color: var(--coloLi);
-          padding: 12px 10px;
-          background-color: var(--backgLi);
-          border-radius: 5px;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-          transition: 0.5s ease;
-          animation: liMovie 0.6s alternate;
-
-          & i {
-            position: absolute;
-            right: 10px;
-            top: 0;
-            z-index: 100;
-            border: solid 1px;
-            border-radius: 5px;
-            padding: 3px;
-            cursor: pointer;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-          & i:hover {
-            animation: iconliMovie 0.6s alternate infinite;
-          }
-          & i:nth-child(1):hover {
-            background-color: var(--backgIcon1Hover);
-            color: var(--colorIcon1E2Hover);
-            transition: 0.5s ease;
-          }
-          & i:nth-child(2):hover {
-            background-color: var(--backgIcon2Hover);
-            color: var(--colorIcon1E2Hover);
-            transition: 0.5s ease;
-            transform: translateY(-5px) scale(1.1);
-          }
-          & i:nth-child(1) {
-            margin-right: 30px;
-          }
-        }
-        & li:hover {
-          transform: translateY(-5px) scale(1.01);
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        }
-        & li.feito {
-          text-decoration: line-through;
-          background-color: var(--backgLiAtivo);
-          transition: 0.6s ease;
-          opacity: 0.8;
-
-          & i:nth-child(1):hover {
-            animation: none;
-          }
-          & i:nth-child(1) {
-            color: var(--colorIconFeito);
-          }
-        }
-      }
-    }
-  }
 }
-
-
-
+body form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 30px;
+  width: 600px;
+  height: 500px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 10px;
+  background-color: var(--backgForm);
+}
+body form h1 {
+  text-align: center;
+  color: var(--colorH1);
+}
+body form .caixa-input {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  /*border: solid 1px;*/
+}
+body form .caixa-input i {
+  position: relative;
+  z-index: 1;
+  left: 30px;
+  font-size: 17px;
+  cursor: pointer;
+  color: var(--colorIconInput);
+  transition: 1s ease;
+}
+body form .caixa-input i:hover {
+  animation: iconInputMovie 0.6s alternate infinite;
+}
+body form .caixa-input i.active {
+  transform: translateY(-10px) scale(1.02);
+  color: var(--colorIconActive);
+}
+body form .caixa-input i.active:hover {
+  animation: none;
+}
+body form .caixa-input input {
+  position: relative;
+  width: 70%;
+  padding: 8px 30px;
+  border-radius: 5px;
+  border: none;
+  border: solid 1px #000;
+  outline: none;
+  background-color: var(--backgInput);
+  color: var(--colorInput);
+  font-weight: bold;
+  transition: 0.4s ease;
+}
+body form .caixa-input input:focus {
+  transform: translateY(-10px) scale(1.02);
+  transition: 0.6s ease;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+body form .caixa-input span {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  font-weight: bold;
+}
+body form button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--backgButton);
+  color: var(--coloButton);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+  transition: 1s ease;
+}
+body form button:hover {
+  transform: translateY(-10px) scale(1.1);
+  background-color: var(--backgButtonHover);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+body form .caixa-ul {
+  width: 100%;
+  padding: 10px;
+  overflow-y: auto;
+}
+body form .caixa-ul ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+body form .caixa-ul ul li {
+  position: relative;
+  display: flex;
+  color: var(--coloLi);
+  padding: 12px 10px;
+  background-color: var(--backgLi);
+  border-radius: 5px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transition: 0.5s ease;
+  animation: liMovie 0.6s alternate;
+}
+body form .caixa-ul ul li i {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  z-index: 100;
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 3px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body form .caixa-ul ul li i:hover {
+  animation: iconliMovie 0.6s alternate infinite;
+}
+body form .caixa-ul ul li i:nth-child(1):hover {
+  background-color: var(--backgIcon1Hover);
+  color: var(--colorIcon1E2Hover);
+  transition: 0.5s ease;
+}
+body form .caixa-ul ul li i:nth-child(2):hover {
+  background-color: var(--backgIcon2Hover);
+  color: var(--colorIcon1E2Hover);
+  transition: 0.5s ease;
+  transform: translateY(-5px) scale(1.1);
+}
+body form .caixa-ul ul li i:nth-child(1) {
+  margin-right: 30px;
+}
+body form .caixa-ul ul li:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+body form .caixa-ul ul li.feito {
+  color: #fff;
+  background-color: var(--backgLiAtivo);
+  transition: 0.6s ease;
+  opacity: 0.8;
+}
+body form .caixa-ul ul li.feito i:nth-child(1):hover {
+  animation: none;
+}
+body form .caixa-ul ul li.feito i:nth-child(1) {
+  color: var(--colorIconFeito);
+}
 
 /* ANIMAÇÕES */
 @keyframes iconInputMovie {
-
   to {
     transform: rotate(10deg) scale(1.1);
     color: var(--coloIconInputAnimation);
   }
-
   from {
     transform: rotate(-5deg);
   }
 }
-
 @keyframes iconliMovie {
-
   to {
     transform: translateY(-50%) rotate(10deg);
   }
-
   from {
     transform: translateY(-60%) rotate(-5deg) scale(1.1);
   }
 }
-
 @keyframes liMovie {
-
   to {
-    transform: scale(1.0);
+    transform: scale(1);
   }
-
   from {
     transform: scale(0.1);
   }
 }
-
-
-
 /* RESPONSIVIDADE PRA CELULAR */
 @media only screen and (max-width: 648px) {
-
-  body {
-
-    form {
+  body form {
     height: 750px;
-
-    .caixa-input {
-
-    & button {
-      padding: 7px 5px;
-    }
   }
+  body form .caixa-input button {
+    padding: 7px 5px;
   }
-  }
-}
+}/*# sourceMappingURL=styles.css.map */
